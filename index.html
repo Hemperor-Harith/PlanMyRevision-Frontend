@@ -4,6 +4,11 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PlanMyRevision — Revise Smarter. Not Harder.</title>
+  <meta name="description" content="Get a free personalised revision plan built around your subjects, exam dates and learning style. Delivered to your inbox in minutes."/>
+  <meta name="keywords" content="revision planner, GCSE revision, A level revision, personalised revision plan, revision timetable"/>
+  <meta property="og:title" content="PlanMyRevision — Revise Smarter. Not Harder."/>
+  <meta property="og:description" content="Get a free personalised revision plan built around your subjects, exam dates and learning style. Delivered to your inbox in minutes."/>
+  <meta property="og:url" content="https://planmyrevision.vercel.app"/>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -143,6 +148,14 @@
     .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.2); }
     footer { background: var(--ink); color: rgba(255,255,255,0.4); text-align: center; padding: 2rem; font-size: 0.8rem; }
     footer strong { color: rgba(255,255,255,0.7); }
+    .reviews-wrap { background: var(--paper); padding: 6rem 2rem; }
+    .reviews-inner { max-width: 1100px; margin: 0 auto; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .review-card { background: var(--white); border: 1px solid rgba(0,0,0,0.07); border-radius: 16px; padding: 2rem; transition: transform 0.2s, box-shadow 0.2s; }
+    .review-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
+    .review-stars { color: var(--gold); font-size: 1.1rem; margin-bottom: 1rem; }
+    .review-text { font-family: "DM Serif Display", serif; font-size: 1rem; font-style: italic; color: var(--ink); line-height: 1.6; margin-bottom: 1rem; letter-spacing: -0.01em; }
+    .review-attr { font-size: 0.8rem; color: var(--muted); font-weight: 500; }
     @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
@@ -326,6 +339,33 @@ OCR Chemistry - 2/5 - 10 June"></textarea>
         </div>
         <button class="submit-btn" onclick="submitForm()">Generate My Revision Plan →</button>
         <div class="form-status" id="form-status"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- REVIEWS -->
+  <div class="reviews-wrap">
+    <div class="reviews-inner">
+      <div class="reveal" style="text-align:center; margin-bottom: 2.5rem;">
+        <p class="section-label" style="justify-content:center; display:flex;">What students say</p>
+        <h2 class="section-title" style="margin: 0 auto; text-align:center;">Real results from real students</h2>
+      </div>
+      <div class="reviews-grid reveal">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <blockquote class="review-text">"I never knew where to start with revision. This gave me a plan for every single day and told me exactly what to do. It actually works."</blockquote>
+          <div class="review-attr">— Year 10 student · 11 subjects</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <blockquote class="review-text">"The techniques it suggested actually made a difference. I used to just re-read my notes. Now I actually feel like I am revising properly."</blockquote>
+          <div class="review-attr">— Year 11 student · GCSE exams</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <blockquote class="review-text">"Got my plan in minutes and it felt like it was written just for me. The rest days were a nice touch — I actually stuck to it."</blockquote>
+          <div class="review-attr">— Year 13 student · A Levels</div>
+        </div>
       </div>
     </div>
   </div>
